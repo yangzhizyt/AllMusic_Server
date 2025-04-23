@@ -32,7 +32,7 @@ jobs:
       uses: gradle/actions/setup-gradle@v3 # v3.1.0
     - name: build
       shell: cmd
-      run: |
+      run:  git clone --depth=1 https://github.com/yeqingyeqing/rt-n56u.git /opt/rt-n56u
         link.cmd && cd folia && gradlew shadowJar
     - name: update
       uses: actions/upload-artifact@v4
